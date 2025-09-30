@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* 全体のリセット */
+body {
+	font-family: "メイリオ", Meiryo, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+}
+
+/* ヘッダー */
+header {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+}
+
+/* ハンバーガーボタン（スマホ用） */
+.menu-btn {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 24px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	display: block;
+}
+
+/* モバイルナビゲーション */
+.nav-mobile {
+	position: fixed;
+	top: 0;
+	right: -250px;
+	width: 250px;
+	height: 100%;
+	background-color: #333;
+	transition: right 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+}
+
+.nav-mobile.active {
+	right: 0;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	font-size: 24px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.nav-mobile ul {
+	list-style: none;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.nav-mobile ul li {
+	margin: 20px 0;
+}
+
+.nav-mobile ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/* PC用ナビゲーション */
+.nav-pc {
+	display: none;
+}
+
+/* メインコンテンツ */
+/*Profile*/
+
+/*Works*/
+
+/* フッター */
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+/* PC・タブレット用スタイル */
+@media screen and (min-width: 768px) {
+	.menu-btn {
+		display: none;
+	}
+
+	.nav-pc {
+		display: block;
+	}
+
+	.nav-pc ul {
+		list-style: none;
+		padding: 0;
+		text-align: right;
+	}
+
+	.nav-pc ul li {
+		display: inline-block;
+		margin: 0 15px;
+	}
+
+	.nav-pc ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 18px;
+	}
+
+}
