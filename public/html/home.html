@@ -3,11 +3,95 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>Portfolio｜Home</title>
+	<meta name="portfolio" content="学習記録をまとめたポートフォリオ">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- リセットCSS -->
+	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+	<!-- オリジナルCSS -->
+	<link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
+	<header>
+		<h1>Skeleton</h1>
 
+		<!-- PC用ナビゲーション -->
+		<nav class="nav-pc">
+			<ul>
+				<li><a href="#">home</a></li>
+				<li><a href="works.html">works</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- スマホ用ハンバーガーメニュー -->
+		<button class="menu-btn">&#9776;</button>
+		<nav class="nav-mobile">
+			<button class="close-btn">&times;</button>
+			<ul>
+				<li><a href="#">home</a></li>
+				<li><a href="works.html">works</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</nav>
+		<h1>My portfolio</h1>
+		<h2>学び続け、成長し続けるエンジニアとして</h2>
+	</header>
+
+	<main>
+		<article>
+			<h2>Profile</h2>
+			<img src="../image/myillustration.png" alt="紹介イラスト">
+			<p>
+				<strong>名前：</strong>三浦 麻由佳<br>
+				<strong>出身：</strong>青森県<br>
+			</p>
+			<p> 研修でフロントからバック、プロジェクト管理など幅広く経験<br>
+				休日は美味しいお店探しやアクティビティでリフレッシュ<br>
+				学びを力に着実に成長し続けるエンジニアを目指します！ </p>
+		</article>
+
+		<section class="works">
+			<h2>Works</h2>
+			<div class="works-grid">
+				<div class="work-card"> <img src="../image/frontend.png" alt="フロントエンド">
+					<h3>Frontend</h3>
+					<p>HTML/CSS/JavaScriptを用いた画面開発<br> レスポンシブ対応を学習</p>
+				</div>
+				<div class="work-card"> <img src="../image/backend.png" alt="バックエンド">
+					<h3>Backend</h3>
+					<p>JavaとOracle DBを利用したデータ設計<br> CRUD処理や例外処理を通して基礎を習得</p>
+				</div>
+				<div class="work-card"> <img src="../image/infrastructure.png" alt="インフラ">
+					<h3>Infrastructure</h3>
+					<p>AWSの基礎を学習</p>
+				</div>
+				<div class="work-card"> <img src="../image/result.png" alt="成果">
+					<h3>Result</h3>
+					<p>練習問題を通じての実装力<br> チーム・個人開発の成果</p>
+				</div>
+			</div>
+		</section>
+		<section class="contact-link">
+			<h2>Contact</h2>
+			<p>ご質問やご相談などお気軽にお問い合わせください。</p>
+			<p> <a href="contact.html" class="contact-button">お問い合わせはこちら</a> </p>
+		</section>
+	</main>
+	<footer>
+		<p>© 2025 All Rights Reserved.</p>
+	</footer>
+	<script> // ハンバーガーメニュー開閉の処理 
+		// ハンバーガーメニュー開閉の処理
+		document.querySelector(".menu-btn").addEventListener("click", function () {
+			document.querySelector(".nav-mobile").classList.add("active");
+		});
+
+		document.querySelector(".close-btn").addEventListener("click", function () {
+			document.querySelector(".nav-mobile").classList.remove("active");
+		});
+	</script>
 </body>
 
 </html>
