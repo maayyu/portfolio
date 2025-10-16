@@ -79,7 +79,7 @@
 						<h3>個人開発<br>Bright Balance(ポジティブ変換日記)</h3>
 					</div>
 				</div>
-				<p> <a href="./html/works.html" class="works-button">View More...</a> </p>
+				<!-- <p> <a href="./html/works.html" class="works-button">View More...</a> </p> -->
 			</div>
 		</section>
 
@@ -166,7 +166,7 @@
 						<h3>Spring</h3>
 					</div>
 				</div>
-				<p> <a href="./html/works.html" class="works-button">View More...</a> </p>
+				<!-- <p> <a href="./html/works.html" class="works-button">View More...</a> </p> -->
 		</section>
 		</div>
 
@@ -182,27 +182,23 @@
 						<strong>出身：</strong>青森県<br>
 					</p>
 					<p>
-						研修ではフロントエンドからバックエンド、データベース、チーム開発まで幅広く学び、<br>
-						JavaやSpring Bootを中心に、Webアプリケーションの仕組みを体系的に理解しました。<br>
-						また、設計意図を考えながらコードを読み解く力や、課題を整理し筋道を立てて解決する力に強みがあります。<br>
+						研修ではフロントエンドからバックエンド、データベース、チーム開発まで幅広く学習<br>
+						課題整理、解決の情報収集や試行錯誤をし筋道を立てて解決することが得意です<br>
+						前職ではプリセールス・営業として、課題を把握し最適な提案を行ってきました<br>
+						課題の発見・整理・解決策の模索は得意で、わからないことを放置せず、<br>
+						自分で調べて試行錯誤を重ねる過程にやりがいを感じます<br>
 					</p>
 					<p>
-						前職ではプリセールス・営業として、お客様の課題を把握し最適な提案を行う経験を積みました。<br>
-						この経験から、「相手の意図をくみ取り、的確に行動する力」や「根拠をもって説明する力」を培いました。<br>
-						自ら積極的に発信することはまだ課題ですが、しっかり準備し、丁寧に伝えることを大切にしています。<br>
+						自ら積極的に発信することはまだ課題ですが、しっかり準備し丁寧に伝えることを大切にしています<br>
+						「まずは小さく共有する」「不安でも動いてみる」を意識していきます<br>
 					</p>
 					<p>
-						一方で、課題の発見・整理・解決策の模索は得意で、わからないことを放置せず、<br>
-						自分で調べて試行錯誤を重ねる過程にやりがいを感じます。<br>
-						「まずは小さく共有する」「不安でも動いてみる」を意識し、報連相や提案力を高めていきたいと考えています。<br>
+						エンジニアとして、設計意図を理解した上で柔軟に開発に参加できるエンジニアを目指しています<br>
+						堅実に知識を積み重ねながら、周囲と協力してより良いものを作り上げていけるよう成長していきます<br>
 					</p>
 					<p>
-						今後は、設計意図を理解した上で柔軟に開発に参加できるエンジニアを目指しています。<br>
-						堅実に知識を積み重ねながら、周囲と協力してより良いものを作り上げていけるよう成長していきます。<br>
-					</p>
-					<p>
-						休日は美味しいお店探しやアクティビティでリフレッシュするのが楽しみ。<br>
-						日常の中でも気づきを大切にし、学びを力に変えて前進し続けます。<br>
+						休日は美味しいお店探しやアクティビティでリフレッシュするのが楽しみ<br>
+						日常の中でも気づきを大切にし、学びを力に変えて前進し続けます<br>
 					</p>
 				</div>
 			</div>
@@ -213,14 +209,32 @@
 				<h2 class="contact-main">Contact</h2>
 			</div>
 			<p>ご質問やご相談などお気軽にお問い合わせください。</p>
-			<p> <a href="./html/contact.html" class="contact-button">お問い合わせはこちら</a> </p>
+			<!--	<p> <a href="./html/contact.html" class="contact-button">お問い合わせはこちら</a> </p>-->
+			<form class="contact-form" action="./html/contact.html" method="post">
+				<div class="form-group">
+					<label for="name">お名前：</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">メールアドレス：</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="message">お問い合わせ内容：</label>
+					<textarea id="message" name="message" rows="5" required></textarea>
+				</div>
+
+				<button type="submit" class="contact-button">送信する</button>
+			</form>
 		</section>
 	</main>
 	<footer>
 		<p>© 2025 All Rights Reserved.</p>
 	</footer>
-	<script> // ハンバーガーメニュー開閉の処理 
-		// ハンバーガーメニュー開閉の処理
+	<script>
+		// ハンバーガーメニュー開閉の処理 
 		document.querySelector(".menu-btn").addEventListener("click", function () {
 			document.querySelector(".nav-mobile").classList.add("active");
 		});

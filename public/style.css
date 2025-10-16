@@ -231,12 +231,17 @@ header {
 	margin-top: 2rem;
 }
 
-.works-card,
-.skills-card {
+.works-card {
 	border-radius: 8px;
 	padding: 1rem;
 	text-align: center;
 	box-shadow: 4px 4px 8px rgb(0 0 0 / 77%);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.works-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .works-card img {
@@ -311,14 +316,41 @@ article::before,
 	margin-top: 2rem;
 }
 
+.skills-card {
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 4px 4px 8px rgb(0 0 0 / 77%);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.skills-detail ul {
+	list-style: none;
+	padding-left: 1rem;
+	margin: 0;
+}
+
+.skills-detail ul li {
+	position: relative;
+	margin-bottom: 0.6rem;
+	padding-left: 1.2rem;
+	line-height: 1.6;
+}
+
 .skills-card h3 {
 	margin-bottom: 0.5rem;
+	position: relative;
 }
 
 .skills-card p {
 	font-size: 0.95rem;
 	line-height: 1.5;
 	margin: 0;
+	text-align: justify;
 }
 
 @media (min-width: 600px) {
@@ -343,17 +375,97 @@ article img {
 	border-radius: 100px;
 }
 
-.profile-contents{
-	
+.profile-contents {
+	padding: 1.5rem;
+	border-radius: 12px;
+	color: #333;
+	font-size: 0.8rem;
+	margin: 1.5rem 1rem;
+}
+
+.profile-contents strong {
+	color: #333;
+	font-weight: 700;
+	display: inline-block;
+	min-width: 4rem;
+}
+
+.profile-contents p {
+	margin-bottom: 1.2rem;
+}
+
+.profile-contents p:first-child {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 0.8rem;
+	margin-bottom: 1.5rem;
+	font-size: 1rem;
+	text-align: left;
+}
+
+.profile-contents p:not(:first-child) {
+	text-align: justify;
 }
 
 /*Contact*/
 .contact-link p {
 	font-size: 1rem;
 	margin: 1rem 0;
+	position: relative;
+	text-align: center;
+}
+
+.contact-form {
+	margin: 0 auto;
+	width: 60%;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 0.7rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 1rem;
+	box-sizing: border-box;
+	background-color: #fff;
+	transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: #777;
+	outline: none;
 }
 
 .contact-button {
+	display: block;
+	margin: 1.5rem auto;
+	background-color: #B8E2BE;
+	color: #333;
+	padding: 0.8rem 1.8rem;
+	border-radius: 30px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+	background-color: #f0f0f0;
+	transform: translateY(-3px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*.contact-button {
 	display: inline-block;
 	background-color: #F7F7F7;
 	padding: 0.8rem 1.6rem;
@@ -367,7 +479,7 @@ article img {
 .contact-button:hover {
 	background-color: #fff;
 	transform: translateY(-2px);
-}
+}*/
 
 /* フッター */
 footer {
