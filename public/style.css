@@ -327,12 +327,6 @@ article::before,
 	}
 }
 
-@media (min-width: 900px) {
-	.skills-grid {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
-
 /*Profile*/
 .profile-block {
 	display: flex;
