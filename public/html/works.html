@@ -1,12 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>Works | Portfolio</title>
+	<meta name="description" content="学習実績・制作物一覧">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- リセットCSS -->
+	<link rel="stylesheet" href="https:/unpkg.com/ress/dist/ress.min.css">
+	<!-- 共通CSS（indexと同じ） -->
+	<link rel="stylesheet" href="../style.css">
+	<!-- worksページ専用CSS -->
+	<link rel="stylesheet" href="../css/works.css">
 </head>
 
 <body>
+	<header>
+		<!-- PC用ナビゲーション -->
+		<nav class="nav-pc">
+			<ul>
+				<li><a href="../index.html">home</a></li>
+				<li><a href="./works.html">works</a></li>
+				<li><a href="./contact.html">contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- スマホ用 -->
+		<button class="menu-btn">&#9776;</button>
+		<nav class="nav-mobile">
+			<button class="close-btn">&times;</button>
+			<ul>
+				<li><a href="../index.html">home</a></li>
+				<li><a href="./works.html">works</a></li>
+				<li><a href="./contact.html">contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- タイトル -->
+		<div class="title">
+			<div class="title-container">
+				<div class="title-box handdrawn">
+					<h1>
+						<span class="title-name">MAYUKA's</span><br>
+						<span class="title-main">Works</span>
+					</h1>
+					<h2>学習実績・制作物一覧</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- Works -->
+		<section class="works works-page">
+			<div class="works-container">
+				<h2 class="works-title">
+					<span class="works-main">Works</span>
+					<span class="works-sub">学習実績</span>
+				</h2>
+
+				<div class="works-list">
+
+					<article class="works-item">
+						<img src="../img/teamDev.png" alt="チーム開発">
+						<div class="works-content">
+							<h3>チーム開発｜社員管理システム</h3>
+							<p>
+								Spring Bootを用いた基礎学習の集大成として作成した社員管理アプリ。<br>
+								設計共有・レビューを行いながら、Gitを用いたチーム開発を経験。
+							</p>
+							<ul>
+								<li>技術：Spring Boot / Oracle / Git</li>
+								<li>内容：CRUD処理・例外処理・設計分担</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="works-item">
+						<img src="../img/individualCon.png" alt="個人開発 コンソール">
+						<div class="works-content">
+							<h3>個人開発｜コンソールタスク管理システム</h3>
+							<p>
+								Javaを用いたコンソール型タスク管理システム。<br>
+								入力チェックや一覧表示、状態管理を実装。
+							</p>
+							<ul>
+								<li>技術：Java</li>
+								<li>内容：ロジック設計・例外処理</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="works-item">
+						<img src="../img/individualApp.png" alt="Webアプリ">
+						<div class="works-content">
+							<h3>個人開発｜Bright Balance</h3>
+							<p>
+								Next.jsを用いたWebアプリケーション。<br>
+								ポジティブ変換日記として、入力・一覧・編集・削除機能を実装。
+							</p>
+							<ul>
+								<li>技術：Next.js </li>
+								<li>内容：MVC設計・DB連携・バリデーション</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="works-item">
+						<div class="works-content">
+							<h3>ペア開発 | 書籍管理システム</h3>
+							<p> Spring Bootを用いた書籍管理アプリ。<br>
+								設計共有を行いながら、Gitを用いたチーム開発を経験。</p>
+						</div>
+					</article>
+
+					<!-- 今後ここに追加 -->
+					<!--
+        <article class="works-item">
+          <div class="works-content">
+            <h3>追加したい成果名</h3>
+            <p>説明文</p>
+          </div>
+        </article>
+        -->
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- ===== Footer ===== -->
+	<footer>
+		<p><a href="../index.html">ホームへ戻る</a></p>
+		<p>© 2025 All Rights Reserved.</p>
+	</footer>
+
+	<!-- ===== Script ===== -->
+	<script>
+		document.querySelector(".menu-btn").addEventListener("click", function () {
+			document.querySelector(".nav-mobile").classList.add("active");
+		});
+
+		document.querySelector(".close-btn").addEventListener("click", function () {
+			document.querySelector(".nav-mobile").classList.remove("active");
+		});
+	</script>
 
 </body>
 

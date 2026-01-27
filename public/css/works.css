@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* worksページ専用 */
+.works-page {
+	padding-bottom: 3rem;
+}
+
+/* 一覧レイアウト */
+.works-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+/* 各作品カード */
+.works-item {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 4px 4px 8px rgb(0 0 0 / 30%);
+	transition: transform 0.2s ease;
+}
+
+.works-item:hover {
+	transform: translateY(-4px);
+}
+
+/* 画像 */
+.works-item img {
+	width: 100%;
+	height: auto;
+}
+
+/* 文章エリア */
+.works-content {
+	padding: 1.5rem;
+}
+
+.works-content h3 {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+}
+
+.works-content p {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+
+.works-content ul {
+	list-style: none;
+	padding: 0;
+	font-size: 0.9rem;
+}
+
+.works-content ul li {
+	margin-bottom: 0.4rem;
+}
+
+/* タブレット以上 */
+@media (min-width: 768px) {
+	.works-item {
+		flex-direction: row;
+	}
+
+	.works-item img {
+		width: 40%;
+		object-fit: cover;
+	}
+
+	.works-content {
+		width: 60%;
+	}
+}
